@@ -1,2 +1,2 @@
 def teste():
-    return 1
+    return 2
