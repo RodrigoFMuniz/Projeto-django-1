@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+
+        body {
+            background: lightyellow;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-family: 'Comforter', cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color:red;">Sobre</h1>
+    {%block content%}
+    <h1>{{nome}}</h1>
+    <h1>{{sobrenome}}</h1>
+    <h1>{{age}}</h1>
+    {%endblock content%}
+
+    <script>
+        const h2 = document.createElement('div')
+        h2.textContent = 'Teste dinâmico interno de sobre'
+        h2.style.fontSize = '5rem'
+        h2.style.fontFamily = 'Comforter, cursive';
+        document.body.appendChild(h2)
+    </script>
+</body>
+
+</html>
