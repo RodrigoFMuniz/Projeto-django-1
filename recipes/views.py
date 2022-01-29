@@ -11,7 +11,7 @@ def home(request):
         'sobrenome': 'Muniz',
         'age': 35,
     }
-    return HttpResponse(render_to_string('recipes\\home.html', context=obj))
+    return HttpResponse(render_to_string('teste\\home.html', context=obj))
 
 
 def sobre(request):
