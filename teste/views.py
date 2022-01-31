@@ -1,16 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.template.loader import render_to_string
 
 
 # Create your views here.
 def teste(request):
-    return HttpResponse('''
-    <html>
-    <head>
-    <title>teste</title>
-    </head>
-    <body>
-    <h1>teste</h1>
-    </body>
-    </html>
-    ''')
+    return HttpResponse(render_to_string('teste\\teste.html'))
