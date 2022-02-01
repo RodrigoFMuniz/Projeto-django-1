@@ -92,6 +92,12 @@
             font-family: var(--font-headings);
         }
 
+        .container {
+            max-width: 144rem;
+            margin: 0 auto;
+            padding: var(--spacing-gutter-medium);
+        }
+
         .main-header-container {
             background: var(--color-primary-dark);
         }
@@ -172,17 +178,16 @@
             background: var(--color-white);
         }
 
-        .main-container {
-            max-width: 800px;
-            background: blue;
-            margin: 0 auto;
-            padding-top: 0;
-            ;
-        }
+        .main-container {}
 
         .main-box {
-            background: red;
-            height: 50rem;
+            padding-top: 0;
+        }
+
+        .main-content-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: var(--spacing-gutter-large);
         }
     </style>
 </head>
