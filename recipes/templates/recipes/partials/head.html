@@ -213,8 +213,31 @@
 
         .recipe-title-container {
             padding: var(--spacing-gutter-medium);
+            padding-bottom: calc(var(--spacing-gutter-medium)/2);
         }
 
-        .recipe-title {}
+        .recipe-author {
+            padding: 0 var(--spacing-gutter-medium);
+        }
+
+        .recipe-author-item {
+            color: var(--color-gray-4);
+            margin-right: 1rem;
+        }
+
+        .recipe-content {
+            padding: var(--spacing-gutter-medium);
+            padding-top: calc(var(--spacing-gutter-medium)/2);
+        }
+
+        .recipe-author-item a {
+            color: var(--color-primary);
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .recipe-author-item a:hover {
+            color: var(--color-primary-dark);
+        }
     </style>
 </head>
