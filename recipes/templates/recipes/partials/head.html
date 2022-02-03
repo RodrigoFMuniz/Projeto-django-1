@@ -193,14 +193,16 @@
 
         .recipe {
             background: var(--color-white);
-            box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.6);
+            box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.9);
             transition: all 0.2s ease-in-out;
             transform: scale(1);
+            border-radius: 1rem;
+            overflow: hidden;
         }
 
         .recipe:hover {
-            transform: scale(1.02);
-            box-shadow: 0px 7px 8px 2px rgba(0, 0, 0, 0.4);
+            transform: scale(1.01);
+            box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.4);
         }
 
         .recipe img {
@@ -257,6 +259,23 @@
 
         .recipe-meta-title {
             font-size: 1.6rem;
+        }
+
+
+        .recipe-footer a {
+            background: var(--color-primary-dark);
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            color: var(--color-white);
+            padding: var(--spacing-gutter-medium);
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .recipe-footer a:hover {
+            filter: brightness(2);
         }
     </style>
 </head>
