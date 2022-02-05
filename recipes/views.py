@@ -14,10 +14,10 @@ def home(request):
     return HttpResponse(render_to_string('recipes\\pages\\home.html', context=obj))
 
 
-def sobre(request):
+def recipe(request, id):
     obj = {
         'nome': 'Rodrigo',
         'sobrenome': 'Muniz',
         'age': 35,
     }
-    return render(request, 'recipes\\pages\\sobre.html', context=obj)
+    return render(request, 'recipes\\pages\\recipe.html', context=obj)
