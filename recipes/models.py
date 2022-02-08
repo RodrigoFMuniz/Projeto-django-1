@@ -9,6 +9,9 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=65)
 
+    def __str__(self):
+        return self.name
+
 # class Author(models.Model):
 #     name = models.CharField(65)
 
