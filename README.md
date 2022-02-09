@@ -1,7 +1,7 @@
 # ![DJANGO](./external_content/django.png)
 
-## Estudos
+# Estudos
 
-### Conceitos
+## Conceitos
 
 - Virtual Environment
