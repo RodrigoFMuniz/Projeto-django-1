@@ -11,7 +11,7 @@ from recipes.models import Recipe
 def home(request):
     obj = {
         # 'recipes': [make_recipe() for _ in range(10)],
-        'recipes': Recipe.objects.all().order_by('-id')
+        'recipes': Recipe.objects.filter(is_published=True).order_by('-id')
     }
     return HttpResponse(render_to_string('recipes\\pages\\home.html', context=obj))
 
