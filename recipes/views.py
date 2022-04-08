@@ -21,7 +21,8 @@ def home(request):
 def category(request, category_id):
     recipe = Recipe.objects.filter(
         category__id=category_id, is_published=True).order_by('-id')
-    return render(request, 'recipes\\pages\\categories.html', context={'recipes': recipe})
+    title = recipe.first().category.name
+    return render(request, 'recipes\\pages\\categories.html', context={'recipes': recipe, 'title': title})
 
 
 def recipe(request, pk):
