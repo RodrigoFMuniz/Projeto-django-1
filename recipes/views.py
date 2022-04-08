@@ -16,12 +16,12 @@ def home(request):
     return HttpResponse(render_to_string('recipes\\pages\\home.html', context=obj))
 
 def category(request, category_id):
-    recipe= Recipe.objects.filter(category__id = category_id).order_by('-id')
+    recipe= Recipe.objects.filter(category__id = category_id, is_published=True).order_by('-id')
     return render(request, 'recipes\\pages\\home.html', context={'recipes':recipe})
 
 def recipe(request, pk):
     print('id', pk)
-    recipe= Recipe.objects.filter(id = pk).first()
+    recipe= Recipe.objects.filter(id = pk, is_published=True).first()
     print('recipe', recipe)
     return render(request, 'recipes\\pages\\recipe.html', context={'recipe':recipe, 'is_detail_page': True})
 
