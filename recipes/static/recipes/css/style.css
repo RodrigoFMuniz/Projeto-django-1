@@ -290,3 +290,14 @@ h6 {
 .preparation-steps {
   color: red;
 }
+
+.content-404-box {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.content-404 {
+  font-size: 4rem;
+}

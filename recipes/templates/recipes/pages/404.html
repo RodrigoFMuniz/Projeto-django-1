@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {%include 'recipes\\partials\\head.html'%}
+    <title>404 - Recipes</title>
+</head>
+
+<body>
+    {%include 'recipes\\partials\\header.html'%}
+    <div class="content-404-box">
+        <div class="content-404">404</div>
+        <div><a href="{% url 'recipes:home'  %}">Go to home</a></div>
+    </div>
+    {%include 'recipes\\partials\\footer.html'%}
+</body>
+
+</html>

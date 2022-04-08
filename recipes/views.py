@@ -1,4 +1,5 @@
 from sre_constants import CATEGORY_WORD
+from telnetlib import STATUS
 
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -21,8 +22,9 @@ def home(request):
 def category(request, category_id):
     recipe = Recipe.objects.filter(
         category__id=category_id, is_published=True).order_by('-id')
-    title = recipe.first().category.name
-    return render(request, 'recipes\\pages\\categories.html', context={'recipes': recipe, 'title': title})
+    if not recipe:
+        return render(request, 'recipes\\pages\\404.html', status=404)
+    return render(request, 'recipes\\pages\\categories.html', context={'recipes': recipe, 'title': f'{recipe.first().category.name}'})
 
 
 def recipe(request, pk):
