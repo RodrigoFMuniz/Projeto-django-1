@@ -299,5 +299,6 @@ h6 {
   align-items: center;
 }
 .content-404 {
-  font-size: 4rem;
+  font-size: 6rem;
+  font-weight: 700;
 }
