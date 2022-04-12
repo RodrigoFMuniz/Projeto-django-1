@@ -24,4 +24,3 @@ def recipe(request, pk):
     recipe= Recipe.objects.filter(id = pk, is_published=True).first()
     print('recipe', recipe)
     return render(request, 'recipes\\pages\\recipe.html', context={'recipe':recipe, 'is_detail_page': True})
-
